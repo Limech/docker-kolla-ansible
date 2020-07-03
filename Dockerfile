@@ -1,12 +1,12 @@
 FROM ubuntu:18.04
 
 RUN apt-get update
-RUN apt-get install -y python-dev libffi-dev gcc libssl-dev python-selinux python-setuptools openssh-client vim
+RUN apt-get install -y python3-dev libffi-dev gcc libssl-dev python3-selinux python-setuptools openssh-client vim
 
-RUN apt-get install -y python-pip
+RUN apt-get install -y python3-pip
 #RUN apt-get install -y ansible
-RUN pip install ansible==2.9.10
-RUN pip install kolla-ansible==9.1.0
+RUN pip3 install ansible==2.9.10
+RUN pip3 install kolla-ansible==10.0.0
 
 RUN mkdir -p /etc/kolla
 
