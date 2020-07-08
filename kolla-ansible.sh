@@ -14,4 +14,4 @@ done
 }
 
 
-docker run --rm -it $(add_hosts) -e UID=$(id -u) -e GID=$(id -g) -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro -v ~/.ssh/id_rsa:/root/.ssh/id_rsa -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub  -v ${PWD}/kolla:/etc/kolla -v ${PWD}/inventory:/opt/inventory colla $cmd
+docker run --rm -it $(add_hosts) -e UID=$(id -u) -e GID=$(id -g) -v /etc/timezone:/etc/timezone:ro -v /etc/localtime:/etc/localtime:ro -v ~/.ssh/id_rsa:/root/.ssh/id_rsa -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub  -v ${PWD}/kolla:/etc/kolla -v ${PWD}/inventory:/opt/inventory kolla $cmd
