@@ -102,11 +102,11 @@ network_interface: "enp0s8"
 # the 'network_interface'. These interfaces must contain an IP address.
 kolla_external_vip_interface: "{{ network_interface }}"
 api_interface: "{{ network_interface }}"
-storage_interface: "enp0s3"
-cluster_interface: "enp0s3"
+storage_interface: "enp0s10"
+cluster_interface: "enp0s16"
 #swift_storage_interface: "{{ storage_interface }}"
 #swift_replication_interface: "{{ swift_storage_interface }}"
-tunnel_interface: "enp0s3"
+tunnel_interface: "{{ network_interface }}"
 dns_interface: "{{ network_interface }}"
 #octavia_network_interface: "{{ api_interface }}"
 
@@ -128,7 +128,7 @@ dns_interface: "{{ network_interface }}"
 # though an IP address can exist on this interface, it will be unusable in most
 # configurations. It is recommended this interface not be configured with any IP
 # addresses for that reason.
-neutron_external_interface: "enp0s3"
+neutron_external_interface: "enp0s9"
 
 # Valid options are [ openvswitch, linuxbridge, vmware_nsxv, vmware_nsxv3, vmware_dvs, opendaylight ]
 # if vmware_nsxv3 is selected, enable_openvswitch MUST be set to "no" (default is yes)
@@ -325,7 +325,7 @@ enable_openstack_core: "yes"
 #enable_neutron_qos: "no"
 #enable_neutron_agent_ha: "no"
 #enable_neutron_bgp_dragent: "no"
-#enable_neutron_provider_networks: "no"
+enable_neutron_provider_networks: "yes"
 #enable_neutron_segments: "no"
 #enable_neutron_sfc: "no"
 #enable_neutron_metering: "no"
