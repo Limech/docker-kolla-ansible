@@ -2,13 +2,10 @@
 
 cp /data/shared/ceph/ceph.conf kolla/config/glance/
 cp /data/shared/ceph/ceph.client.glance.keyring kolla/config/glance/
-mkdir kolla/config/cinder/cinder-backup
-mkdir kolla/config/cinder/cinder-volume
 cp /data/shared/ceph/ceph.conf kolla/config/cinder/
 cp /data/shared/ceph/ceph.client.cinder.keyring kolla/config/cinder/cinder-backup/
 cp /data/shared/ceph/ceph.client.cinder-backup.keyring kolla/config/cinder/cinder-backup/
 cp /data/shared/ceph/ceph.client.cinder.keyring kolla/config/cinder/cinder-volume/
-mkdir kolla/config/nova
 cp /data/shared/ceph/ceph.conf kolla/config/nova/
 cp /data/shared/ceph/ceph.client.cinder.keyring kolla/config/nova/
 cp kolla/config/nova/ceph.client.cinder.keyring kolla/config/nova/ceph.client.nova.keyring

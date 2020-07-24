@@ -12,7 +12,7 @@ network01 ansible_user=root become_method=su
 compute01 ansible_user=root become_method=su
 
 [monitoring]
-#monitoring01
+control[01:03]   ansible_user=root become_method=su
 
 # When compute nodes and control nodes use different interfaces,
 # you need to comment out "api_interface" and other interfaces from the globals.yml

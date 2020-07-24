@@ -1,3 +1,4 @@
+*.img
 inventory/'~'
 kolla/admin-openrc.sh
 kolla/passwords.yml
