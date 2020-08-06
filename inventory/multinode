@@ -744,7 +744,6 @@ monitoring
 control
 compute
 network
-storage
 
 [prometheus-mysqld-exporter:children]
 mariadb
